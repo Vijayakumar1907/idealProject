@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Home_Fragment"
+    android:scrollbars="none">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/linone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto"
+                    android:text="Deliver to VIJAYAKUMAR R....641666"
+                    android:textColor="@color/textColor" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_down_other" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/horiz_Scroll1"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/linone">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/AutoImage_Slider"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@id/horiz_Scroll1"
+                android:layout_marginTop="5dp"
+                app:sliderAnimationDuration="3000"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderIndicatorEnabled="false">
+
+            </com.smarteist.autoimageslider.SliderView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/horiz_Scroll_2"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/horiz_Scroll1"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="160dp"
+                android:layout_marginBottom="10dp"
+                >
+
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/Today_dealsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/horiz_Scroll_2"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Today's Deals"
+                android:textColor="@color/Primary_textColor"
+                android:textSize="21sp" />
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/AutoImage_SliderTwo"
+                android:layout_below="@id/Today_dealsText"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="304dp"
+                app:sliderAnimationDuration="3000"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderIndicatorEnabled="false"
+                app:sliderScrollTimeInSec="5"
+                app:sliderStartAutoCycle="true">
+
+            </com.smarteist.autoimageslider.SliderView>
+
+            <LinearLayout
+                android:id="@+id/TodayDeal_ImageLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/AutoImage_SliderTwo"
+                android:layout_marginTop="10dp"
+                >
+
+                <ImageView
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/today_deal_one"/>
+                <ImageView
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:src="@drawable/today_deal_two"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="10dp"/>
+                <ImageView
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:layout_marginStart="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/today_deal_three"/>
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/today_deal_four"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/SeeAllDeals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See all deals"
+                android:textSize="14sp"
+                android:layout_below="@id/TodayDeal_ImageLayout"
+                android:layout_marginTop="18sp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/roboto_thin"
+                android:textColor="@color/see_all"/>
+
+            <TextView
+                android:id="@+id/Related_Items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Related to items you've viewed"
+                android:textSize="21sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_below="@id/SeeAllDeals"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/Primary_textColor"
+                android:layout_marginStart="10dp"/>
+
+            <GridLayout
+                android:id="@+id/Related_Grid"
+                android:layout_below="@id/Related_Items"
+                android:layout_marginTop="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rowCount="2"
+                android:columnCount="2">
+
+                <RelativeLayout
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_height="200dp"
+                    android:layout_width="170dp"
+                    android:layout_margin="2dp"
+                    android:background="@color/img_back">
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/today_deal_one"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_height="200dp"
+                    android:layout_width="170dp"
+                    android:layout_margin="2dp"
+                    android:background="@color/img_back">
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/today_deal_two"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_height="200dp"
+                    android:layout_width="170dp"
+                    android:layout_margin="2dp"
+                    android:background="@color/img_back">
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/today_deal_three"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_height="200dp"
+                    android:layout_width="170dp"
+                    android:layout_margin="2dp"
+                    android:background="@color/img_back">
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/today_deal_four"/>
+                </RelativeLayout>
+
+
+
+            </GridLayout>
+
+        </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:id="@+id/User_userDetails"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/User_Hello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_light"
+                android:text="Hello, "
+                android:textColor="@color/Primary_textColor"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/User_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/User_Hello"
+                android:fontFamily="@font/roboto_bold"
+                android:text="VIJAYAKUMAR R"
+                android:textSize="21sp" />
+
+
+            <ImageView
+                android:id="@+id/User_userImage"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="2dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_account_circle_24" />
+
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/User_TopGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/User_userDetails"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:columnCount="2"
+            android:rowCount="2">
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="8dp"
+                android:background="@drawable/menu_add_background"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Your Orders"
+                android:textAllCaps="false">
+
+            </Button>
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="8dp"
+                android:background="@drawable/menu_add_background"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Buy Again"
+                android:textAllCaps="false">
+
+            </Button>
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="8dp"
+                android:background="@drawable/menu_add_background"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Your Account"
+                android:textAllCaps="false">
+
+            </Button>
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="8dp"
+                android:background="@drawable/menu_add_background"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Your Wishlist"
+                android:textAllCaps="false">
+
+            </Button>
+
+
+        </GridLayout>
+
+
+        <TextView
+            android:id="@+id/User_YourOrderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/User_TopGrid"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18sp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Yours Orders"
+            android:textColor="@color/Primary_textColor"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/YourOrder_Recycler"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/User_YourOrderText"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/seeAll_YourOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/YourOrder_Recycler"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="See all orders"
+            android:textColor="@color/see_all" />
+
+        <TextView
+            android:id="@+id/Your_WhishlistText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seeAll_YourOrder"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18sp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Your Wish List"
+            android:textColor="@color/Primary_textColor"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/WishList_Mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Your_WhishlistText"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:text="Private"
+            android:textSize="13sp" />
+
+        <GridLayout
+            android:id="@+id/WhishList_Grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/WishList_Mode"
+            android:rowCount="2"
+            android:columnCount="2"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="200dp"
+                android:layout_width="170dp"
+                android:layout_margin="2dp"
+                android:background="@color/img_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/today_deal_one"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="200dp"
+                android:layout_width="170dp"
+                android:layout_margin="2dp"
+                android:background="@color/img_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/today_deal_one"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="200dp"
+                android:layout_width="170dp"
+                android:layout_margin="2dp"
+                android:background="@color/img_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/today_deal_one"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="200dp"
+                android:layout_width="170dp"
+                android:layout_margin="2dp"
+                android:background="@color/img_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/today_deal_one"/>
+            </RelativeLayout>
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/seeAll_YourWhishList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/WhishList_Grid"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="See all orders"
+            android:textColor="@color/see_all" />
+
+        <TextView
+            android:id="@+id/Buy_AgainTextmain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seeAll_YourWhishList"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18sp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Buy Again"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/Primary_textColor"
+            android:textSize="18sp" />
+
+        <GridLayout
+            android:id="@+id/BuyAgain_Grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Buy_AgainTextmain"
+            android:rowCount="2"
+            android:columnCount="2"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="200dp"
+                android:layout_width="170dp"
+                android:layout_margin="2dp"
+                android:background="@color/img_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/today_deal_one"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="200dp"
+                android:layout_width="170dp"
+                android:layout_margin="2dp"
+                android:background="@color/img_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/today_deal_one"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="200dp"
+                android:layout_width="170dp"
+                android:layout_margin="2dp"
+                android:background="@color/img_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/today_deal_one"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="200dp"
+                android:layout_width="170dp"
+                android:layout_margin="2dp"
+                android:background="@color/img_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/today_deal_one"/>
+            </RelativeLayout>
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/SeeAll_Buyagain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/BuyAgain_Grid"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="See more past purchases"
+            android:textColor="@color/see_all" />
+
+        <TextView
+            android:id="@+id/Your_AccountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SeeAll_Buyagain"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18sp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Your Account"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/Primary_textColor"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Your_AccountRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="5dp"
+            android:layout_below="@id/Your_AccountText">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/seeAllViewurAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Your_AccountRecycler"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="See all orders"
+            android:textColor="@color/see_all" />
+
+        <TextView
+            android:id="@+id/KeepShoppingFor_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seeAllViewurAccount"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18sp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Keep Shopping for"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/Primary_textColor"
+            android:textSize="18sp" />
+
+
+
+
+        <GridLayout
+            android:id="@+id/KeepShopping_Grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/KeepShoppingFor_Text"
+            android:rowCount="2"
+            android:columnCount="2"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="200dp"
+                android:layout_width="170dp"
+                android:layout_margin="2dp"
+                android:background="@color/img_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/today_deal_one"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="200dp"
+                android:layout_width="170dp"
+                android:layout_margin="2dp"
+                android:background="@color/img_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/today_deal_one"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="200dp"
+                android:layout_width="170dp"
+                android:layout_margin="2dp"
+                android:background="@color/img_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/today_deal_one"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="200dp"
+                android:layout_width="170dp"
+                android:layout_margin="2dp"
+                android:background="@color/img_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/today_deal_one"/>
+            </RelativeLayout>
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/seeAllBrowsinghistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/KeepShopping_Grid"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="View your browsing history"
+            android:textColor="@color/see_all" />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

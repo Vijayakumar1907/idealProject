@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/image_layoutCart"
+        android:layout_width="110sp"
+        android:layout_height="140dp">
+
+    <ImageView
+        android:id="@+id/Cart_imageView"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:src="@drawable/today_deal_one"
+        android:scaleType="centerInside"
+        android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/Cart_ProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image_layoutCart"
+        android:layout_marginStart="10dp"
+        android:textSize="16dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/Primary_textColor"
+        android:text="URBN 10000 mAh Li-Polymer Ultra Compact Power Bank with 12W Fast..."
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/Cart_ProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/image_layoutCart"
+        android:layout_below="@id/Cart_ProductName"
+        android:layout_marginStart="10dp"
+        android:text="$250.00"
+        android:layout_marginTop="4dp"/>
+    <TextView
+        android:id="@+id/Shipping_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_toRightOf="@id/image_layoutCart"
+        android:layout_below="@id/Cart_ProductPrice"
+        android:textColor="@color/freeshipping_color"
+        android:fontFamily="@font/roboto_light"
+        android:text="Eligible for FREE Shipping"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/in_Stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_toRightOf="@id/image_layoutCart"
+        android:layout_below="@id/Shipping_type"
+        android:textColor="@color/textColor"
+        android:fontFamily="@font/roboto_light"
+        android:text="In stock"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/product_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_toRightOf="@id/image_layoutCart"
+        android:layout_below="@id/in_Stock"
+        android:textColor="@color/Primary_textColor"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Colour: "
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/product_color_ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_toRightOf="@id/product_color"
+        android:layout_below="@id/in_Stock"
+        android:textColor="@color/Primary_textColor"
+        android:fontFamily="@font/roboto_light"
+        android:text="Camo"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/product_styleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_toRightOf="@id/image_layoutCart"
+        android:layout_below="@id/product_color"
+        android:textColor="@color/Primary_textColor"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Style name: "
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/product_styleAns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_toRightOf="@id/product_styleName"
+        android:layout_below="@id/product_color_ans"
+        android:textColor="@color/Primary_textColor"
+        android:fontFamily="@font/roboto_light"
+        android:text="1000 mAh"
+        android:layout_marginStart="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/Counts"
+        android:layout_below="@id/product_styleName"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp">
+
+
+
+        <RelativeLayout
+            android:id="@+id/plusImgLay"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/plus_minusbackground">
+            <ImageView
+                android:id="@+id/plusImage"
+                android:src="@drawable/ic_plus"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+
+                />
+        </RelativeLayout>
+
+            <EditText
+                android:id="@+id/product_count"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:background="@drawable/centerplusminus"
+                android:layout_toRightOf="@id/plusImgLay"
+                android:cursorVisible="false"
+                android:singleLine="true"
+                />
+
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:id="@+id/minusLay"
+            android:layout_toRightOf="@id/product_count"
+            android:background="@drawable/minus_pusbackground"
+
+            >
+            <ImageView
+                android:id="@+id/minusImage"
+                android:src="@drawable/ic_minus"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/Cart_DeleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Counts"
+        android:text="Delete"
+        android:padding="5dp"
+        android:background="@drawable/search_background"
+        android:elevation="2dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/Cart_Saveforlater_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Counts"
+        android:layout_toRightOf="@id/Cart_DeleteButton"
+        android:text="Save for later"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/search_background"
+        android:elevation="2dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/SeeLikeThis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Cart_Saveforlater_button"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:text="See more like this"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/SeeLikeThis"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+    </LinearLayout>
+</RelativeLayout>

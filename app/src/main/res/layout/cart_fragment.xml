@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amar.library.ui.StickyScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Cart_Fragment"
+    app:stickyHeader="@id/Sticky_Top">
+
+    <com.amar.library.ui.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:stickyHeader="@id/Sticky_Top"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linonedelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto"
+                android:text="Deliver to VIJAYAKUMAR R....641666"
+                android:textColor="@color/textColor" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_down_other" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Subtotal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Subtotal"
+            android:layout_marginStart="10dp"
+            android:textSize="21sp"
+            android:layout_below="@id/linonedelivery"
+            android:layout_marginTop="15dp" />
+        <TextView
+            android:id="@+id/Subtotal_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linonedelivery"
+            android:layout_toRightOf="@id/Subtotal_text"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="4000.00"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/Primary_textColor"/>
+        <TextView
+            android:id="@+id/EMI_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_below="@id/Subtotal_text"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="EMI Available "
+            android:textColor="@color/Primary_textColor"
+            />
+        <TextView
+            android:id="@+id/EMi_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_below="@id/Subtotal_text"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/EMI_text"
+            android:fontFamily="@font/roboto"
+            android:text="Details "
+            android:layout_marginStart="10dp"
+            android:textColor="@color/primary_color"/>
+
+        <LinearLayout
+            android:id="@+id/Eligible_freeDeliLinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EMI_text"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:id="@+id/done_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_done"
+                />
+            <TextView
+                android:id="@+id/eligible_freeDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Your order is eligible for FREE Delivery"
+                android:textColor="@color/textColor"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Checkout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select this option ot checkout."
+            android:layout_below="@id/Eligible_freeDeliLinear"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"/>
+        <TextView
+            android:id="@+id/checkout_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:layout_below="@id/Eligible_freeDeliLinear"
+            android:layout_toRightOf="@id/Checkout_text"
+            android:textColor="@color/primary_color"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"/>
+
+        <LinearLayout
+            android:id="@+id/Sticky_Top"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_below="@id/Checkout_text"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/proceed_back">
+
+            <TextView
+                android:id="@+id/items_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="16sp"
+                android:textColor="@color/Primary_textColor"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/items_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Items"
+                android:textSize="16sp"
+                android:textColor="@color/Primary_textColor"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="10dp"
+                android:text="Proceed to Buy"
+                android:textSize="18sp"
+                android:background="@color/buttonBackre"
+                android:textAllCaps="false"
+                android:fontFamily="@font/roboto_medium"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp">
+
+        <CheckBox
+            android:id="@+id/checkbox_giftOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/Gift_OptionsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add gift options"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12sp"
+            android:layout_marginEnd="10dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Product_itemsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/Saved_forLater_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp"
+            android:text="Saved For Later"
+            android:textSize="21sp"
+            android:textColor="@color/Primary_textColor"
+            android:fontFamily="@font/roboto_medium"/>
+
+        <LinearLayout
+            android:id="@+id/LInSAVErecycler"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12sp"
+            android:layout_marginEnd="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/SaveLater_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/Frequently_purshaseditems_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SaveLater_recycler"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="21sp"
+            android:text="Explore frequently repurchased items"
+            android:textColor="@color/Primary_textColor"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Frquently_purshasedRecycler"
+            android:layout_below="@id/Frequently_purshaseditems_text"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/TopPicsforyou_text"
+            android:layout_below="@id/Frquently_purshasedRecycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/Primary_textColor"
+            android:textSize="21sp"
+            android:text="Top pics for you"
+            android:fontFamily="@font/roboto_medium"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/TopPics_recycler"
+            android:layout_below="@id/TopPicsforyou_text"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</com.amar.library.ui.StickyScrollView>
+
+    </com.amar.library.ui.StickyScrollView>

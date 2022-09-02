@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MenuFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp">
+
+
+        <TextView
+            android:id="@+id/Your_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Orders"
+            android:textSize="21sp"
+            android:letterSpacing=".01"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/Primary_textColor"/>
+
+        <TextView
+            android:id="@+id/Buy_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy Again"
+            android:textSize="21sp"
+            android:letterSpacing=".01"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/Primary_textColor"/>
+
+        <TextView
+            android:id="@+id/wish_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Wish List"
+            android:textSize="21sp"
+            android:letterSpacing=".01"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/Primary_textColor"/>
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Account"
+            android:textSize="21sp"
+            android:letterSpacing=".01"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/Primary_textColor"/>
+        <TextView
+            android:id="@+id/Category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop by Category"
+            android:textSize="21sp"
+            android:letterSpacing=".01"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/Primary_textColor"/>
+        <TextView
+            android:id="@+id/pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ideal Pay"
+            android:textSize="21sp"
+            android:letterSpacing=".01"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/Primary_textColor"/>
+        <TextView
+            android:id="@+id/Prog_andfeats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Programs and Features"
+            android:textSize="21sp"
+            android:letterSpacing=".01"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/Primary_textColor"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/menu_add_background"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/ad"
+            android:scaleType="centerCrop"
+
+            />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="21sp"
+            android:letterSpacing=".01"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/Primary_textColor"/>
+        <TextView
+            android:id="@+id/cust_serv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer Service"
+            android:textSize="21sp"
+            android:letterSpacing=".01"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/Primary_textColor"/>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
